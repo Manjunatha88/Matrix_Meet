@@ -99,7 +99,7 @@
 
 <div class="container mt-5">
     <div class="right-table">
-        <div class="table-responsive p-0">
+        <div class="table-responsive p-0 mt-1">
             <table id="faculty-table" class="table table-striped">
                 <thead>
                     <tr>
