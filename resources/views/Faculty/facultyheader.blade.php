@@ -15,7 +15,7 @@
                     <li class="nav-item">
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('meetingaction')}}">Join Meeting</a>
+                        <a class="nav-link" href="http://127.0.0.1:3000/action.html">Join Meeting</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href=" ">Upcoming Meeting</a>

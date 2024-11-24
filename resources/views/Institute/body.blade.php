@@ -38,8 +38,8 @@
                     <div class="button-container">
                         <!-- Top Buttons -->
                         <div class="button-row">
-            <a href="{{url('meetingaction')}}" class="btn btn-secondary">Start Meeting</a>
-            <a href="{{url('meetingaction')}}" class="btn btn-secondary">Join Meeting</a>
+            <a href="http://127.0.0.1:3000/action.html" class="btn btn-secondary">Start Meeting</a>
+            <a href="http://127.0.0.1:3000/action.html" class="btn btn-secondary">Join Meeting</a>
         </div>
         <!-- Bottom Buttons -->
         <div class="button-row">
@@ -59,7 +59,7 @@
     <h3>Dashboard</h3>
     <div class="statistics">
         <div class="stat">
-            <a href="{{url('meetingaction')}}" class="button"><h4>Join Meetings</h4></a>
+            <a href="http://127.0.0.1:3000/action.html" class="button"><h4>Join Meetings</h4></a>
         </div>
         <div class="stat">
             <a href="#" class="button"><h4>Upcoming Meetings</h4></a>
