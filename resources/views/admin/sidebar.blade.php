@@ -1,16 +1,47 @@
 <div class="sidebar">
     <h2>Minister</h2>
-    <ul>
-        <li><a href="#dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
-        <li><a href="{{url('viewMessage')}}"><i class="fas fa-bell"></i> Notifications </a></li>
-        <!-- <li><a href="#inbox"><i class="fas fa-inbox"></i> Inbox</a></li> -->
-        <li><a href="{{url('viewinstitute')}}"><i class="fas fa-plus-circle"></i> Add Institute</a></li>
-        <li><a href="{{url('showinstitute')}}"><i class="fas fa-info-circle"></i> Institute Details</a></li>
-        <li><a href="{{url('meetingaction')}}"><i class="fas fa-video"></i> Meetings</a></li>
-        <li><a href="{{url('viewschedule')}}"><i class="fas fa-calendar-alt"></i> Schedule Meeting</a></li> 
-        <li><a href="{{url('meetinghistory')}}"><i class="fas fa-history"></i> Meeting History</a></li>
-        <li><a href="#about-us"><i class="fas fa-users"></i> About Us</a></li>
-    </ul>
+    <ul style="list-style-type: none; padding: 0; margin: 0;">
+    <li style="margin: 10px 0;">
+        <a href="{{url('home')}}" style="text-decoration: none; display: flex; align-items: center;">
+            <i class="fas fa-home" style="margin-right: 8px;"></i> Dashboard
+        </a>
+    </li>
+    <li style="margin: 10px 0;">
+        <a href="{{url('viewMessage')}}" style="text-decoration: none; display: flex; align-items: center;">
+            <i class="fas fa-bell" style="margin-right: 8px;"></i> Notifications
+        </a>
+    </li>
+    <li style="margin: 10px 0;">
+        <a href="{{url('viewinstitute')}}" style="text-decoration: none; display: flex; align-items: center;">
+            <i class="fas fa-plus-circle" style="margin-right: 8px;"></i> Add Institute
+        </a>
+    </li>
+    <li style="margin: 10px 0;">
+        <a href="{{url('showinstitute')}}" style="text-decoration: none; display: flex; align-items: center;">
+            <i class="fas fa-info-circle" style="margin-right: 8px;"></i> Institute Details
+        </a>
+    </li>
+    <li style="margin: 10px 0;">
+        <a href="http://127.0.0.1:3000/action.html" style="text-decoration: none; display: flex; align-items: center;" onclick="return redirectToMeeting(event);">
+            <i class="fas fa-video" style="margin-right: 8px;"></i> Meetings
+        </a>
+    </li>
+    <li style="margin: 10px 0;">
+        <a href="{{url('viewschedule')}}" style="text-decoration: none; display: flex; align-items: center;">
+            <i class="fas fa-calendar-alt" style="margin-right: 8px;"></i> Schedule Meeting
+        </a>
+    </li>
+    <li style="margin: 10px 0;">
+        <a href="{{url('meetinghistory')}}" style="text-decoration: none; display: flex; align-items: center;">
+            <i class="fas fa-history" style="margin-right: 8px;"></i> Meeting History
+        </a>
+    </li>
+    <li style="margin: 10px 0;">
+        <a href="#about-us" style="text-decoration: none; display: flex; align-items: center;">
+            <i class="fas fa-users" style="margin-right: 8px;"></i> About Us
+        </a>
+    </li>
+</ul>
 </div>
 
 <style>

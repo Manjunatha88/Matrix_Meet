@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Meet</title>
+    <link rel="stylesheet" href="public/Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="public/Assets/css/style.css">
+    <style>
+        body {
+            padding-top: 3.5rem;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .jumbotron {
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Full viewport height */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center; /* Center content in each container */
+            align-items: center; /* Center content vertically in each container */
+        }
+
+        .display-center {
+            display: flex;
+            align-items: center; /* Align items vertically in the list */
+        }
+
+        .new-meeting, .join-meeting {
+            background-color: #6c757d; /* Grey background color */
+            color: white; /* White text color */
+            border: none; /* Remove border */
+        }
+
+        .new-meeting:hover, .join-meeting:hover {
+            background-color: #5a6268; /* Darker grey on hover */
+        }
+
+        .join-action {
+            color: #007bff; /* Bootstrap primary color for links */
+            cursor: pointer; /* Pointer cursor to indicate clickable */
+            text-decoration: underline; /* Underline to indicate it's a link */
+        }
+
+        .join-action:hover {
+            text-decoration: none; /* Remove underline on hover for a cleaner look */
+        }
+
+        .signin-image {
+            max-width: 100%; /* Ensure image is responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .enter-code {
+            border: none;
+            outline: none; /* Remove outline on focus */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md fixed-top">
+        <img src="public/assets/images/logo.png" class="logo" alt="">
+        <a href="#" class="navbar-brand text-dark">Matrix Meet</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav mr-0">
+                <li class="nav-item">
+                    <button class="btn btn-lg new-meeting">Start a meeting</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="jumbotron h-100">
+            <div class="container w-50">
+                <ul class="display-center justify-content-start">
+                    <li style="padding: 0;">
+                        <button class="btn btn-lg new-meeting" style="background-color: #6c757d;">
+                            <span class="material-icons mr-2">video_call</span>New Meeting
+                        </button>
+                    </li>
+                    <li class="pl-3">
+                        <button class="btn btn-lg btn-outline-secondary text-dark font-weight-bold display-center" style="background-color: #ffffff;">
+                            <span class="material-icons mr-2">keyboard</span>
+                            <input type="text" placeholder="Enter a code" class="enter-code">
+                        </button>
+                    </li>
+                    <!-- Changed to plain text link -->
+                    <li class="text-dark font-weight-bold cursor-pointer pl-2 join-action">Join Meeting</li>
+                </ul>
+            </div>
+            <div class="container w-50">
+                <img src="public/Assets/images/m2.jpg" alt="" class="signin-image">
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $(document).on("click", ".join-meeting", function(){
+                $(".enter-code").focus();
+            });
+            
+            $(document).on("click", ".join-action", function(){
+                var join_value = $('.enter-code').val();
+                if (join_value) { // Check if the input is not empty
+                    var meetingUrl = window.location.origin + "?meetingID=" + join_value;
+                    window.location.replace(meetingUrl);
+                } else {
+                    alert("Please enter a Meeting ID."); // Prompt if no ID is entered
+                }
+            });
+            
+            $(document).on("click", ".new-meeting", function(){
+                var meetingID = prompt("Please enter a Meeting ID to start the meeting:");
+                if (meetingID) { // Check if user entered an ID
+                    var meetingUrl = window.location.origin + "?meetingID=" + meetingID;
+                    window.location.replace(meetingUrl);
+                } else {
+                    alert("Meeting ID cannot be empty."); // Alert if no ID is entered
+                }
+            });
+        });
+    </script>
+</body>
+</html>
