@@ -37,7 +37,7 @@
         </a>
     </li>
     <li style="margin: 10px 0;">
-        <a href="#about-us" style="text-decoration: none; display: flex; align-items: center;">
+        <a href="{{url('home')}}" style="text-decoration: none; display: flex; align-items: center;">
             <i class="fas fa-users" style="margin-right: 8px;"></i> About Us
         </a>
     </li>

@@ -27,91 +27,89 @@
          @include('home.header')
          <!-- end header section -->
          <!-- slider section -->
-         <section class="slider_section ">
-            <div class="slider_bg_box">
-               <img src="images/m1-bg.png" alt="">
+<section class="slider_section ">
+   <div class="slider_bg_box">
+      <img src="images/m1-bg.png" alt="">
+   </div>
+   <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+         <div class="carousel-item active">
+            <div class="container ">
+               <div class="row">
+                  <div class="col-md-7 col-lg-6 ">
+                     <div class="detail-box">
+                        <h1>
+                           <span>
+                              Join Meeting
+                           </span>
+                           <br>
+                           easily on the goo..
+                        </h1>
+                        <div class="btn-box">
+                           <a href="{{ route('login') }}" class="btn1">
+                              Login to Join
+                           </a> 
+                        </div> 
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                     <div class="container ">
-                        <div class="row">
-                           <div class="col-md-7 col-lg-6 ">
-                              <div class="detail-box">
-                                 <h1>
-                                    <span>
-                                    Join Meeting
-                                    </span>
-                                    <br>
-                                    easily on the goo..
-                                 </h1>
-                                
-                                  <div class="btn-box">
-                                     <a href="" class="btn1">
-                                    Login to Join
-                                    </a> 
-                                  </div> 
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="carousel-item ">
-                     <div class="container ">
-                        <div class="row">
-                           <div class="col-md-7 col-lg-6 ">
-                              <div class="detail-box">
-                                 <h1>
-                                    <span>
-                                    Schedule Meeting
-                                    </span>
-                                    <br>
-                                    Catch meetings on the goo..
-                                 </h1>
-                                 
-                                  <div class="btn-box">
-                                    <a href="" class="btn1">
-                                    Login to Schedule 
-                                    </a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="container ">
-                        <div class="row">
-                           <div class="col-md-7 col-lg-6 ">
-                              <div class="detail-box">
-                                 <h1>
-                                    <span>
-                                    Create Meetings
-                                    </span>
-                                    <br>
-                                    Easily create meeting with your team..
-                                 </h1>
-                               
-                                  <div class="btn-box">
-                                    <a href="" class="btn1">
-                                    Login to Create 
-                                    </a>
-                                 </div>
-                              </div>
-                           </div>
+         </div>
+         <div class="carousel-item ">
+            <div class="container ">
+               <div class="row">
+                  <div class="col-md-7 col-lg-6 ">
+                     <div class="detail-box">
+                        <h1>
+                           <span>
+                              Schedule Meeting
+                           </span>
+                           <br>
+                           Catch meetings on the goo..
+                        </h1>
+                        <div class="btn-box">
+                           <a href="{{ route('login') }}" class="btn1">
+                              Login to Schedule
+                           </a>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="container">
-                  <ol class="carousel-indicators">
-                     <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-                     <li data-target="#customCarousel1" data-slide-to="1"></li>
-                     <li data-target="#customCarousel1" data-slide-to="2"></li>
-                  </ol>
+            </div>
+         </div>
+         <div class="carousel-item">
+            <div class="container ">
+               <div class="row">
+                  <div class="col-md-7 col-lg-6 ">
+                     <div class="detail-box">
+                        <h1>
+                           <span>
+                              Create Meetings
+                           </span>
+                           <br>
+                           Easily create meeting with your team..
+                        </h1>
+                        <div class="btn-box">
+                           <a href="{{ route('login') }}" class="btn1">
+                              Login to Create
+                           </a>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
-         </section>
+         </div>
+      </div>
+      <div class="container">
+         <ol class="carousel-indicators">
+            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+            <li data-target="#customCarousel1" data-slide-to="2"></li>
+         </ol>
+      </div>
+   </div>
+</section>
+
          <!-- end slider section -->
       </div>
       <!-- why section -->
@@ -392,136 +390,54 @@
       <!-- end arrival section -->
       
       <!-- product section -->
-      <section class="product_section layout_padding">
-         <div class="container">
-            <div class="heading_container heading_center">
-               <h2>
-                  Our <span>Services</span>
-               </h2>
+      <section id="ourServices" class="product_section layout_padding">
+   <div class="container">
+      <div class="heading_container heading_center">
+         <h2>
+            Our <span>Services</span>
+         </h2>
+      </div>
+      <div class="row">
+         <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="box" onclick="showAlert()">
+               <div class="img-box">
+                  <img src="images/p1.jpeg" alt="Join Meeting">
+               </div>
+               <div class="detail-box">
+                  <h5>Join Meeting</h5>
+               </div>
             </div>
-            <div class="row">
-               <div class="col-sm-6 col-md-4 col-lg-4">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p1.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Join Meeting
-                        </h5>
-                      
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                          
-                          
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p2.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Create Meeting
-                        </h5>
-                       
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           
-                          
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p3.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                          Schedule Meeting
-                        </h5>
-                       
-                     </div>
-                  </div>
-               </div>
-               <!-- <div class="col-sm-6 col-md-4 col-lg-4">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="" class="option1">
-                          Assign Meeting
-                           </a>
-                          
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p4.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                          Assign Meeting
-                        </h5>
-                        
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="" class="option1">
-                           Record Meeting
-                           </a>
-                          
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p5.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                          Recording Meeting
-                        </h5>
-                       
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4">
-                  <div class="box">
-                     <div class="option_container">
-                        <div class="options">
-                           <a href="" class="option1">
-                         Upcoming Meetings
-                           </a>
-                          
-                        </div>
-                     </div>
-                     <div class="img-box">
-                        <img src="images/p6.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                          Upcoming Meetings
-                        </h5>
-                       
-                     </div>
-                  </div>
-               </div> -->
-         
          </div>
-      </section>
+         <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="box" onclick="showAlert()">
+               <div class="img-box">
+                  <img src="images/p2.jpeg" alt="Create Meeting">
+               </div>
+               <div class="detail-box">
+                  <h5>Create Meeting</h5>
+               </div>
+            </div>
+         </div>
+         <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="box" onclick="showAlert()">
+               <div class="img-box">
+                  <img src="images/p3.jpeg" alt="Schedule Meeting">
+               </div>
+               <div class="detail-box">
+                  <h5>Schedule Meeting</h5>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+<script>
+function showAlert() {
+   alert("Please login to get services.");
+}
+</script>
+
       <!-- end product section -->
 
       <!-- footer start -->
