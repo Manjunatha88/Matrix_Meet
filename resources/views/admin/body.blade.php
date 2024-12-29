@@ -15,13 +15,14 @@
         <h3>Dashboard</h3>
         <div class="statistics">
             <div class="stat">
-                <a href="today-meetings.html" class="button"><h4>Today Meetings</h4></a>
+                <a href="{{url('meetinghistory')}}" class="button"><h4>Today Meetings</h4></a>
             </div>
             <div class="stat">
-                <a href="{{route('getmeeting')}}" class="button"><h4>Upcoming Meetings</h4></a>
+                <a href="{{url('meetinghistory')}}" class="button"><h4>Upcoming Meetings</h4></a>
             </div>
             <div class="stat">
-                <a href="#" class="button"><h4>Notifications</h4></a>
+                <a href="{{url('notification')}}" class="button"><h4>Messages</h4></a>
+                
             </div>
         </div>
     </div>
@@ -90,52 +91,56 @@
     padding: 1px;
 }
         </style>
-        <section class="product_section layout_padding">
-         <div class="container">
-            <div class="heading_container heading_center">
+       <section class="product_section layout_padding">
+   <div class="container">
+      <div class="heading_container heading_center">
+      </div>
+      <div class="row">
+         <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="box">
+               <a href="http://127.0.0.1:3000/action.html" style="text-decoration: none; color: black">
+                  <div class="img-box">
+                     <img src="images/p1.jpeg" alt="">
+                  </div>
+                  <div class="detail-box">
+                     <h5>
+                        Join Meeting
+                     </h5>
+                  </div>
+               </a>
             </div>
-            <div class="row">
-               <div class="col-sm-6 col-md-4 col-lg-4">
-                  <div class="box">
-                     <div class="img-box">
-                        <img src="images/p1.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Join Meeting
-                        </h5>
-                      
-                     </div>
+         </div>
+         <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="box">
+               <a href="http://127.0.0.1:3000/action.html" style="text-decoration: none; color: black !important;">
+                  <div class="img-box">
+                     <img src="images/p2.jpeg" alt="">
                   </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4">
-                  <div class="box">
-                     <div class="img-box">
-                        <img src="images/p2.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Create Meeting
-                        </h5>
-                       
-                     </div>
+                  <div class="detail-box">
+                     <h5>
+                        Create Meeting
+                     </h5>
                   </div>
-               </div>
-               <div class="col-sm-6 col-md-4 col-lg-4">
-                  <div class="box">
-                     <div class="img-box">
-                        <img src="images/p3.jpeg" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                          Schedule Meeting
-                        </h5>
-                       
-                     </div>
+               </a>
+            </div>
+         </div>
+         <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="box">
+               <a href="{{url('viewschedule')}}" style="text-decoration: none; color: black !important;1">
+                  <div class="img-box">
+                     <img src="images/p3.jpeg" alt="">
                   </div>
-               </div>
-    </div>
-</div>
+                  <div class="detail-box">
+                     <h5>
+                        Schedule Meeting
+                     </h5>
+                  </div>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
 <!-- 
 <div id="meeting-history" class="card">
     <h3>Meeting History</h3>

@@ -42,9 +42,13 @@
             <a href="http://127.0.0.1:3000/action.html" class="btn btn-secondary">Join Meeting</a>
         </div>
         <!-- Bottom Buttons -->
-        <div class="button-row">
+        <!-- <div class="button-row">
             <a href="{{ url('viewfaculty') }}" class="btn btn-secondary">Add Faculty</a>
             <a href="{{ url('showfaculty') }}" class="btn btn-secondary">Faculty Details</a>
+        </div> -->
+        <div class="button-row">
+            <a href="{{url('notification')}}"class="btn btn-secondary">Messages</a>
+            <a href="#" class="btn btn-secondary">Notification</a>
         </div>
                     </div>
                 </section>
@@ -52,65 +56,7 @@
             </div>
         </div>
 
-        <!-- Additional Info Section -->
-        <section class="additional-info">
-            <!-- Dashboard Section Below Gallery -->
-<section class="dashboard">
-    <h3>Dashboard</h3>
-    <div class="statistics">
-        <div class="stat">
-            <a href="http://127.0.0.1:3000/action.html" class="button"><h4>Join Meetings</h4></a>
-        </div>
-        <div class="stat">
-            <a href="#" class="button"><h4>Upcoming Meetings</h4></a>
-        </div>
-        <div class="stat">
-            <a href="{{url('notification')}}" class="button"><h4>Messages</h4></a>
-        </div>
-        <div class="stat">
-            <a href="#" class="button"><h4>Notification</h4></a>
-        </div>
-    </div>
-</section>
-<section class="additional-info">
-    <div class="info-container">
-        <div id="meeting-history" class="card">
-            <h3>Meeting History</h3>
-            <table id="history-table">
-                <thead>
-                    <tr>
-                        <th>Meeting Date</th>
-                        <th>Time</th>
-                        <th>Participants</th>
-                        <th>Meeting Title</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2024-06-05</td>
-                        <td>10:00 AM</td>
-                        <td>SIMATS, HINDUSTHAN</td>
-                        <td>Project AICTE</td>
-                    </tr>
-                    <tr>
-                        <td>2024-06-08</td>
-                        <td>2:00 PM</td>
-                        <td>SCON, SSE</td>
-                        <td>Progress Update For Module</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div id="about-us" class="card">
-            <h3>About Us</h3>
-            <p>Welcome to Matrix Meet, the leading online meeting platform endorsed by educational institutions and government ministries. Our secure, user-friendly interface ensures seamless collaboration, enabling effortless communication and productivity for educators, administrators, and students worldwide.</p>
-        </div>
-    </div>
-</section>
-        </section>
-
-    </div>
+      
 
     <style>
         .dashboard {

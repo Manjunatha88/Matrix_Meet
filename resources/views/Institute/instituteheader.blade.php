@@ -12,16 +12,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <!-- <li class="nav-item">
+                    <li class="nav-item">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('viewfaculty') }}">Add Faculty</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('showfaculty') }}">Faculty Details</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('meetingaction')}}">Join Meeting</a>
-                    </li> -->
+                    
                     
                         <x-app-layout></x-app-layout>
                     </li>
