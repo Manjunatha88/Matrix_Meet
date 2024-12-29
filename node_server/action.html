@@ -9,82 +9,121 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="public/Assets/css/style.css">
     <style>
+        /* Apply the Arial font family globally */
         body {
+            font-family: Arial, sans-serif;
             padding-top: 3.5rem;
+            background-color: #f8f9fa; /* Light background for better contrast */
+        }
+
+        .header_section {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .navbar {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .navbar-brand img {
+            height: 62.4px;
+        }
+
+        .app-name {
+            font-size: 26px;
+            font-weight: bold;
+            color: #ffbd59; /* Yellow color */
+        }
+
+        .app-name .matrix {
+            color: #253439; /* Grey color */
         }
 
         .jumbotron {
             display: flex;
-            justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
-            height: 100vh; /* Full viewport height */
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 56px); /* Full viewport height minus header */
         }
 
         .container {
             display: flex;
-            justify-content: center; /* Center content in each container */
-            align-items: center; /* Center content vertically in each container */
+            justify-content: center;
+            align-items: center;
         }
 
         .display-center {
             display: flex;
-            align-items: center; /* Align items vertically in the list */
+            align-items: center;
         }
 
         .new-meeting, .join-meeting {
-            background-color: #6c757d; /* Grey background color */
-            color: white; /* White text color */
-            border: none; /* Remove border */
+            background-color: #6c757d;
+            color: white;
+            border: none;
         }
 
         .new-meeting:hover, .join-meeting:hover {
-            background-color: #5a6268; /* Darker grey on hover */
+            background-color: #5a6268;
         }
 
         .join-action {
-            color: #007bff; /* Bootstrap primary color for links */
-            cursor: pointer; /* Pointer cursor to indicate clickable */
-            text-decoration: underline; /* Underline to indicate it's a link */
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: underline;
         }
 
         .join-action:hover {
-            text-decoration: none; /* Remove underline on hover for a cleaner look */
+            text-decoration: none;
         }
 
         .signin-image {
-            max-width: 100%; /* Ensure image is responsive */
-            height: auto; /* Maintain aspect ratio */
+            max-width: 100%;
+            height: auto;
+            margin-top: 26px;
+
         }
 
         .enter-code {
             border: none;
-            outline: none; /* Remove outline on focus */
+            outline: none;
+        }
+
+        /* Ensure logo and app name are on the left */
+        .navbar-left {
+            display: flex;
+            align-items: center;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md fixed-top">
-        <img src="public/assets/images/logo.png" class="logo" alt="">
-        <a href="#" class="navbar-brand text-dark">Matrix Meet</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto"></ul>
-            <ul class="navbar-nav mr-0">
-                <li class="nav-item">
-                    <button class="btn btn-lg new-meeting">Start a meeting</button>
-                </li>
-            </ul>
+    <header class="header_section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+                <!-- Left section: Logo and App Name -->
+                <div class="navbar-left">
+                    <a class="navbar-brand" href="#">
+                        <img src="public/assets/images/logo.png" alt="#" />
+                    </a>
+                    <span class="app-name">
+                        <span class="matrix">Matrix</span> <span class="meet">Meet</span>
+                    </span>
+                </div>
+            </nav>
         </div>
-    </nav>
-    
+    </header>
+
     <main>
         <div class="jumbotron h-100">
             <div class="container w-50">
+                
                 <ul class="display-center justify-content-start">
                     <li style="padding: 0;">
                         <button class="btn btn-lg new-meeting" style="background-color: #6c757d;">
@@ -97,7 +136,6 @@
                             <input type="text" placeholder="Enter a code" class="enter-code">
                         </button>
                     </li>
-                    <!-- Changed to plain text link -->
                     <li class="text-dark font-weight-bold cursor-pointer pl-2 join-action">Join Meeting</li>
                 </ul>
             </div>
